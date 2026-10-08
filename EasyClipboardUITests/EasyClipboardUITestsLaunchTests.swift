@@ -12,6 +12,9 @@ final class EasyClipboardUITestsLaunchTests: XCTestCase {
             UserDefaults(suiteName: "EasyClipboard.UI.Empty")?.removePersistentDomain(forName: "EasyClipboard.UI.Empty")
         }
         XCTAssertTrue(app.staticTexts["剪贴板还是空的"].waitForExistence(timeout: 5))
+        let settings = app.buttons["openSettings"]
+        XCTAssertTrue(settings.isHittable)
+        XCTAssertTrue(app.windows["EasyClipboard"].frame.contains(settings.frame), "空状态的设置按钮应完整显示")
         let attachment = XCTAttachment(screenshot: app.screenshot())
         attachment.name = "EasyClipboard-空状态"
         attachment.lifetime = .keepAlways

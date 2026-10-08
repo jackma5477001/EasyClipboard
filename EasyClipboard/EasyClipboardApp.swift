@@ -147,7 +147,8 @@ final class ClipboardAppDelegate: NSObject, NSApplicationDelegate {
 
     private func showTestWindow() {
         guard let controller else { return }
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 360, height: 680), styleMask: [.titled, .closable], backing: .buffered, defer: false)
+        let available = NSScreen.main?.visibleFrame ?? NSRect(x: 0, y: 0, width: 1024, height: 768)
+        let window = NSWindow(contentRect: ClipboardPanelLayout.frame(in: available, itemCount: controller.entries.count), styleMask: [.titled, .closable], backing: .buffered, defer: false)
         window.title = "EasyClipboard"
         window.isReleasedWhenClosed = false
         window.contentView = NSHostingView(rootView: ContentView(controller: controller, onSelect: { [weak self] in self?.select($0) }, openSettings: { [weak self] in self?.showSettings() }))

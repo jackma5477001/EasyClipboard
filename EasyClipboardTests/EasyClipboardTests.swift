@@ -258,6 +258,49 @@ struct EasyClipboardTests {
         board.setString("", forType: .string)
         #expect(client.read() == nil)
     }
+
+    @Test func compactPanelFitsShortHistoryAndScreenBounds() {
+        let screen = NSRect(x: -1280, y: -200, width: 1280, height: 800)
+        let single = ClipboardPanelLayout.frame(in: screen, itemCount: 1)
+        let several = ClipboardPanelLayout.frame(in: screen, itemCount: 3)
+        let many = ClipboardPanelLayout.frame(in: screen, itemCount: 20)
+        #expect(single.width == 280)
+        #expect(single.height <= 240)
+        #expect(single.height < several.height)
+        #expect(many.height <= 480)
+        #expect(screen.contains(single))
+        #expect(screen.contains(many))
+        let shortScreen = NSRect(x: 0, y: 0, width: 640, height: 300)
+        #expect(shortScreen.contains(ClipboardPanelLayout.frame(in: shortScreen, itemCount: 20, hasMessage: true)))
+    }
+
+    @Test func approachingTabOpensAndLeavingClosesWithReentryGrace() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        let screen = try #require(NSScreen.screens.first)
+        let frame = screen.visibleFrame
+        // Just outside the visible tab, within its approach margin.
+        var point = NSPoint(x: frame.maxX - 18, y: frame.midY)
+        let coordinator = FloatingPanelCoordinator(controller: env.controller, pasteCoordinator: PasteCoordinator(),
+            onSelect: { _ in }, openSettings: {}, pointerLocation: { point })
+        defer { coordinator.stop() }
+        let previousKeyWindow = NSApp.keyWindow
+        coordinator.checkPointerRegion()
+        #expect(coordinator.isVisible)
+        #expect(NSApp.keyWindow === previousKeyWindow)
+        point = NSPoint(x: frame.minX + 20, y: frame.minY + 20)
+        coordinator.checkPointerRegion()
+        #expect(coordinator.isVisible)
+        try await Task.sleep(for: .milliseconds(150))
+        let panelFrame = ClipboardPanelLayout.frame(in: frame, itemCount: 0)
+        point = NSPoint(x: panelFrame.midX, y: panelFrame.midY)
+        coordinator.checkPointerRegion()
+        try await Task.sleep(for: .milliseconds(220))
+        #expect(coordinator.isVisible)
+        point = NSPoint(x: frame.minX + 20, y: frame.minY + 20)
+        coordinator.checkPointerRegion()
+        try await Task.sleep(for: .milliseconds(360))
+        #expect(!coordinator.isVisible)
+    }
 }
 
 @MainActor

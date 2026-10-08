@@ -25,17 +25,17 @@ struct ContentView: View {
         VStack(spacing: 0) {
             HStack(spacing: 12) {
                 Image(systemName: "doc.on.clipboard")
-                    .font(.system(size: 29, weight: .regular))
+                    .font(.system(size: 24, weight: .regular))
                     .foregroundStyle(Color(red: 0.17, green: 0.23, blue: 0.29))
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("EasyClipboard").font(.system(size: 19, weight: .semibold)).accessibilityIdentifier("appTitle")
+                    Text("EasyClipboard").font(.system(size: 17, weight: .semibold)).accessibilityIdentifier("appTitle")
                     Text("剪贴板历史").font(.system(size: 12)).foregroundStyle(.secondary).accessibilityIdentifier("historyTitle")
                 }
                 .accessibilityElement(children: .contain)
                 Spacer()
                 Button { controller.togglePause() } label: {
                     Image(systemName: controller.isPaused ? "play.fill" : "pause.fill")
-                        .font(.system(size: 13)).frame(width: 32, height: 32)
+                        .font(.system(size: 12)).frame(width: 28, height: 28)
                         .background(Color.black.opacity(0.045), in: Circle())
                 }
                 .buttonStyle(.plain)
@@ -43,7 +43,7 @@ struct ContentView: View {
                 .accessibilityIdentifier("pauseRecording")
                 .accessibilityLabel(controller.isPaused ? "继续记录" : "暂停记录")
             }
-            .padding(.horizontal, 20).padding(.top, 22).padding(.bottom, 18)
+            .padding(.horizontal, 16).padding(.top, 16).padding(.bottom, 12)
 
             if let message = controller.message {
                 HStack(alignment: .top, spacing: 8) {
@@ -60,13 +60,13 @@ struct ContentView: View {
             }
 
             if controller.entries.isEmpty {
-                VStack(spacing: 12) {
-                    Image(systemName: "doc.on.clipboard").font(.system(size: 38, weight: .light)).foregroundStyle(.secondary)
-                    Text(controller.isPaused ? "已暂停记录" : "剪贴板还是空的").font(.system(size: 16, weight: .medium))
+                VStack(spacing: 10) {
+                    Image(systemName: "doc.on.clipboard").font(.system(size: 30, weight: .light)).foregroundStyle(.secondary)
+                    Text(controller.isPaused ? "已暂停记录" : "剪贴板还是空的").font(.system(size: 15, weight: .medium))
                     Text("复制文字、图片或文件，它们会出现在这里。")
-                        .font(.system(size: 12)).foregroundStyle(.secondary).multilineTextAlignment(.center)
+                        .font(.system(size: 11)).foregroundStyle(.secondary).multilineTextAlignment(.center)
                 }
-                .padding(24).frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(16).frame(maxWidth: .infinity, maxHeight: .infinity)
                 .accessibilityIdentifier("emptyHistory")
             } else {
                 ScrollView {
@@ -103,16 +103,16 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, 10)
                 }
                 .accessibilityIdentifier("historyList")
             }
 
-            Divider().padding(.horizontal, 20)
+            Divider().padding(.horizontal, 16)
             HStack(spacing: 8) {
                 if controller.isBusy { ProgressView().controlSize(.small) }
                 Text(controller.isPaused ? "记录已暂停" : "点击条目，粘贴到当前光标位置")
-                    .font(.system(size: 10)).foregroundStyle(.secondary).lineLimit(2)
+                    .font(.system(size: 9)).foregroundStyle(.secondary).lineLimit(2)
                 Spacer(minLength: 0)
                 Text("\(controller.entries.count) / \(controller.limit)")
                     .font(.system(size: 11)).monospacedDigit().foregroundStyle(.secondary)
@@ -121,7 +121,7 @@ struct ContentView: View {
                     .buttonStyle(.bordered).controlSize(.small).accessibilityIdentifier("openSettings")
             }
             .accessibilityElement(children: .contain)
-            .padding(.horizontal, 18).padding(.vertical, 14)
+            .padding(.horizontal, 14).padding(.vertical, 11)
         }
         .background(VisualEffect())
         .clipShape(RoundedRectangle(cornerRadius: 14))
@@ -138,21 +138,21 @@ private struct ClipboardRow: View {
         HStack(spacing: 12) {
             switch entry.kind {
             case .text:
-                Image(systemName: "textformat").font(.system(size: 25, weight: .medium))
+                Image(systemName: "textformat").font(.system(size: 22, weight: .medium))
                     .foregroundStyle(Color(red: 0.29, green: 0.39, blue: 0.48))
-                    .frame(width: 48, height: 48)
+                    .frame(width: 40, height: 40)
                     .background(Color.white.opacity(0.4), in: RoundedRectangle(cornerRadius: 9))
             case .image:
                 Group {
                     if let thumbnail { Image(nsImage: thumbnail).resizable().scaledToFill() }
                     else { Image(systemName: "photo").font(.system(size: 25)).foregroundStyle(.secondary) }
                 }
-                .frame(width: 84, height: 68).clipped().clipShape(RoundedRectangle(cornerRadius: 7))
+                .frame(width: 72, height: 56).clipped().clipShape(RoundedRectangle(cornerRadius: 7))
             case .files:
-                Image(nsImage: fileIcon).resizable().scaledToFit().frame(width: 48, height: 54)
+                Image(nsImage: fileIcon).resizable().scaledToFit().frame(width: 40, height: 46)
             }
             VStack(alignment: .leading, spacing: 6) {
-                Text(entry.title).font(.system(size: 14, weight: .medium)).lineLimit(entry.kind == .text ? 3 : 2)
+                Text(entry.title).font(.system(size: 13, weight: .medium)).lineLimit(entry.kind == .text ? 3 : 2)
                     .multilineTextAlignment(.leading).foregroundStyle(Color.primary)
                 HStack(alignment: .bottom, spacing: 6) {
                     Text(detail).font(.system(size: 11)).foregroundStyle(.secondary).lineLimit(2)
@@ -163,7 +163,7 @@ private struct ClipboardRow: View {
                 }
             }
         }
-        .padding(12).frame(minHeight: 82)
+        .padding(10).frame(minHeight: 72)
         .task(id: entry.imagePath) {
             guard let path = entry.imagePath, let url = try? attachments.attachmentURL(path) else { return }
             let data = await ThumbnailCache.shared.load(url)
