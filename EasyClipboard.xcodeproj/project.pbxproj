@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		7D5266693077E1B0001E2054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D52664D3077E1AF001E2054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5266543077E1AF001E2054;
+			remoteInfo = EasyClipboard;
+		};
+		7D5266733077E1B0001E2054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D52664D3077E1AF001E2054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5266543077E1AF001E2054;
+			remoteInfo = EasyClipboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D5266553077E1AF001E2054 /* EasyClipboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyClipboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5266683077E1B0001E2054 /* EasyClipboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyClipboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5266723077E1B0001E2054 /* EasyClipboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyClipboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7D5266573077E1AF001E2054 /* EasyClipboard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasyClipboard;
+			sourceTree = "<group>";
+		};
+		7D52666B3077E1B0001E2054 /* EasyClipboardTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasyClipboardTests;
+			sourceTree = "<group>";
+		};
+		7D5266753077E1B0001E2054 /* EasyClipboardUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasyClipboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D5266523077E1AF001E2054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5266653077E1B0001E2054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D52666F3077E1B0001E2054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D52664C3077E1AF001E2054 = {
+			isa = PBXGroup;
+			children = (
+				7D5266573077E1AF001E2054 /* EasyClipboard */,
+				7D52666B3077E1B0001E2054 /* EasyClipboardTests */,
+				7D5266753077E1B0001E2054 /* EasyClipboardUITests */,
+				7D5266563077E1AF001E2054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D5266563077E1AF001E2054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D5266553077E1AF001E2054 /* EasyClipboard.app */,
+				7D5266683077E1B0001E2054 /* EasyClipboardTests.xctest */,
+				7D5266723077E1B0001E2054 /* EasyClipboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D5266543077E1AF001E2054 /* EasyClipboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D52667C3077E1B0001E2054 /* Build configuration list for PBXNativeTarget "EasyClipboard" */;
+			buildPhases = (
+				7D5266513077E1AF001E2054 /* Sources */,
+				7D5266523077E1AF001E2054 /* Frameworks */,
+				7D5266533077E1AF001E2054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7D5266573077E1AF001E2054 /* EasyClipboard */,
+			);
+			name = EasyClipboard;
+			packageProductDependencies = (
+			);
+			productName = EasyClipboard;
+			productReference = 7D5266553077E1AF001E2054 /* EasyClipboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D5266673077E1B0001E2054 /* EasyClipboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D52667F3077E1B0001E2054 /* Build configuration list for PBXNativeTarget "EasyClipboardTests" */;
+			buildPhases = (
+				7D5266643077E1B0001E2054 /* Sources */,
+				7D5266653077E1B0001E2054 /* Frameworks */,
+				7D5266663077E1B0001E2054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D52666A3077E1B0001E2054 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7D52666B3077E1B0001E2054 /* EasyClipboardTests */,
+			);
+			name = EasyClipboardTests;
+			packageProductDependencies = (
+			);
+			productName = EasyClipboardTests;
+			productReference = 7D5266683077E1B0001E2054 /* EasyClipboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7D5266713077E1B0001E2054 /* EasyClipboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D5266823077E1B0001E2054 /* Build configuration list for PBXNativeTarget "EasyClipboardUITests" */;
+			buildPhases = (
+				7D52666E3077E1B0001E2054 /* Sources */,
+				7D52666F3077E1B0001E2054 /* Frameworks */,
+				7D5266703077E1B0001E2054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D5266743077E1B0001E2054 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7D5266753077E1B0001E2054 /* EasyClipboardUITests */,
+			);
+			name = EasyClipboardUITests;
+			packageProductDependencies = (
+			);
+			productName = EasyClipboardUITests;
+			productReference = 7D5266723077E1B0001E2054 /* EasyClipboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D52664D3077E1AF001E2054 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					7D5266543077E1AF001E2054 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					7D5266673077E1B0001E2054 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 7D5266543077E1AF001E2054;
+					};
+					7D5266713077E1B0001E2054 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 7D5266543077E1AF001E2054;
+					};
+				};
+			};
+			buildConfigurationList = 7D5266503077E1AF001E2054 /* Build configuration list for PBXProject "EasyClipboard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D52664C3077E1AF001E2054;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7D5266563077E1AF001E2054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D5266543077E1AF001E2054 /* EasyClipboard */,
+				7D5266673077E1B0001E2054 /* EasyClipboardTests */,
+				7D5266713077E1B0001E2054 /* EasyClipboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D5266533077E1AF001E2054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5266663077E1B0001E2054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5266703077E1B0001E2054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D5266513077E1AF001E2054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D5266643077E1B0001E2054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D52666E3077E1B0001E2054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D52666A3077E1B0001E2054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5266543077E1AF001E2054 /* EasyClipboard */;
+			targetProxy = 7D5266693077E1B0001E2054 /* PBXContainerItemProxy */;
+		};
+		7D5266743077E1B0001E2054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D5266543077E1AF001E2054 /* EasyClipboard */;
+			targetProxy = 7D5266733077E1B0001E2054 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7D52667A3077E1B0001E2054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D52667B3077E1B0001E2054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		7D52667D3077E1B0001E2054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EasyClipboard/EasyClipboard.entitlements;
+				INFOPLIST_KEY_LSUIElement = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.light.EasyClipboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7D52667E3077E1B0001E2054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EasyClipboard/EasyClipboard.entitlements;
+				INFOPLIST_KEY_LSUIElement = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.light.EasyClipboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7D5266803077E1B0001E2054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.light.EasyClipboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyClipboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasyClipboard";
+			};
+			name = Debug;
+		};
+		7D5266813077E1B0001E2054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.light.EasyClipboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyClipboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasyClipboard";
+			};
+			name = Release;
+		};
+		7D5266833077E1B0001E2054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.light.EasyClipboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EasyClipboard;
+			};
+			name = Debug;
+		};
+		7D5266843077E1B0001E2054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.light.EasyClipboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EasyClipboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D5266503077E1AF001E2054 /* Build configuration list for PBXProject "EasyClipboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D52667A3077E1B0001E2054 /* Debug */,
+				7D52667B3077E1B0001E2054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D52667C3077E1B0001E2054 /* Build configuration list for PBXNativeTarget "EasyClipboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D52667D3077E1B0001E2054 /* Debug */,
+				7D52667E3077E1B0001E2054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D52667F3077E1B0001E2054 /* Build configuration list for PBXNativeTarget "EasyClipboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5266803077E1B0001E2054 /* Debug */,
+				7D5266813077E1B0001E2054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D5266823077E1B0001E2054 /* Build configuration list for PBXNativeTarget "EasyClipboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D5266833077E1B0001E2054 /* Debug */,
+				7D5266843077E1B0001E2054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D52664D3077E1AF001E2054 /* Project object */;
+}
