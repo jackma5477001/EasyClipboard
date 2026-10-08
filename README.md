@@ -1,6 +1,6 @@
 # EasyClipboard
 
-一个原生 macOS 剪贴板工具，界面遵循 [已选定的浅色设计](docs/界面设计.png)。需要 macOS 15.5 或更新版本，使用 SwiftUI、AppKit、Core Data，无第三方依赖。
+一个原生 macOS 剪贴板工具，界面遵循 [已选定的浅色设计](docs/界面设计.png)，应用图标由 AI 绘制，原图及提示词见 [图标生成说明](docs/图标生成说明.md)。需要 macOS 15.5 或更新版本，使用 SwiftUI、AppKit、Core Data，无第三方依赖。
 
 ## 使用
 
