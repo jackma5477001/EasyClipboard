@@ -22,6 +22,10 @@ final class EasyClipboardUITests: XCTestCase {
     @MainActor func testHistorySettingsPauseAndClear() {
         XCTAssertTrue(app.staticTexts["剪贴板历史"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["周五前完成界面设计，整理测试结果。"].exists)
+        let attachment = XCTAttachment(screenshot: app.windows["EasyClipboard"].screenshot())
+        attachment.name = "EasyClipboard-历史"
+        attachment.lifetime = .keepAlways
+        add(attachment)
         app.buttons["pauseRecording"].click()
         XCTAssertTrue(app.staticTexts["记录已暂停"].exists)
         app.buttons["pauseRecording"].click()
