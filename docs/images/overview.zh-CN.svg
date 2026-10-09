@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="880" viewBox="0 0 1440 880" role="img" aria-labelledby="title desc">
+<title id="title">EasyClipboard：复制过的内容，随手再用</title>
+<desc id="desc">中文功能示意图：屏幕右侧历史面板保存文字、图片和文件；复制、靠近标签、点击粘贴。</desc>
+<defs>
+  <linearGradient id="wallpaper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dce9fb"/><stop offset="1" stop-color="#edf3fc"/></linearGradient>
+  <linearGradient id="photo" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9dd8e7"/><stop offset="1" stop-color="#eff5ea"/></linearGradient>
+  <filter id="shadow" x="-35%" y="-25%" width="175%" height="165%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#091e35" flood-opacity="0.13"/></filter>
+  <clipPath id="desktop"><rect x="680" y="120" width="688" height="548" rx="22"/></clipPath>
+  <clipPath id="photoClip"><rect x="1058" y="380" width="72" height="56" rx="7"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1440" height="880" rx="0" fill="#f3f6fc" />
+<circle cx="1320" cy="126" r="170" fill="#e5edfa" />
+<circle cx="80" cy="625" r="150" fill="#edf2fc" />
+<circle cx="700" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="700" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="724" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="724" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="748" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="748" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="772" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="772" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="796" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="796" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="820" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="820" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="844" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="844" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="868" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="868" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="892" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="892" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="916" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="916" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="940" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="940" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="964" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="964" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="988" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="988" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1012" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1012" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1036" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1036" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1060" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1060" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1084" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1084" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1108" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1108" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1132" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1132" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1156" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1156" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1180" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1180" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1204" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1204" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1228" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1228" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1252" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1252" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1276" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1276" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1300" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1300" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1324" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1324" cy="80" r="1.2" fill="#c9d8ed" />
+<circle cx="1348" cy="56" r="1.2" fill="#c9d8ed" />
+<circle cx="1348" cy="80" r="1.2" fill="#c9d8ed" />
+<g transform="translate(70 46) scale(0.9)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#246be8" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#246be8" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#246be8" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#246be8" stroke-width="2" />
+</g>
+<text x="112" y="72" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="25" font-weight="650" >EasyClipboard</text>
+<text x="70" y="150" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="600" >原生 macOS 剪贴板历史</text>
+<text x="70" y="222" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="58" font-weight="650" >复制过的内容，</text>
+<text x="70" y="296" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="58" font-weight="650" >随手再用。</text>
+<text x="72" y="352" fill="#667b92" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="20" font-weight="400" >文字、图片和文件，留在你的 Mac。</text>
+<text x="72" y="385" fill="#667b92" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="20" font-weight="400" >靠近屏幕右侧，点击即可再次粘贴。</text>
+<rect x="70" y="423" width="160" height="38" rx="19" fill="#e3edfe" />
+<text x="150.0" y="448" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" text-anchor="middle">macOS 15.5+</text>
+<rect x="240" y="423" width="156" height="38" rx="19" fill="#e3edfe" />
+<text x="318.0" y="448" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" text-anchor="middle">本机存储</text>
+<rect x="406" y="423" width="188" height="38" rx="19" fill="#e3edfe" />
+<text x="500.0" y="448" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" text-anchor="middle">无第三方依赖</text>
+<circle cx="81" cy="510" r="11" fill="#e3edfe" />
+<path d="M 76 510 l 4 4 l 7 -8" fill="none" stroke="#246be8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="104" y="516" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="18" font-weight="450" >重复内容自动置顶</text>
+<circle cx="81" cy="553" r="11" fill="#e3edfe" />
+<path d="M 76 553 l 4 4 l 7 -8" fill="none" stroke="#246be8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="104" y="559" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="18" font-weight="450" >暂停时也能拖入文件</text>
+<circle cx="81" cy="596" r="11" fill="#e3edfe" />
+<path d="M 76 596 l 4 4 l 7 -8" fill="none" stroke="#246be8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="104" y="602" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="18" font-weight="450" >默认保留 20 条，可自由调整</text>
+<text x="72" y="656" fill="#667b92" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="12" font-weight="500" >功能示意 · 非实机截图</text>
+<rect x="680" y="120" width="688" height="548" rx="22" fill="url(#wallpaper)" stroke="#d9e3f2" filter="url(#shadow)"/>
+<g clip-path="url(#desktop)">
+<path d="M 680 590 C 790 368 890 518 1030 384 S 1230 294 1370 428 V 670 H 680 Z" fill="#ffffff" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" opacity="0.20"/>
+<rect x="680" y="120" width="688" height="30" rx="0" fill="#ffffff" opacity="0.55"/>
+<text x="702" y="140" fill="#314c61" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="550" >工作桌面</text>
+<g transform="translate(1326 127) scale(0.42)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#314c61" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#314c61" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#314c61" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#314c61" stroke-width="2" />
+</g>
+<rect x="714" y="216" width="296" height="259" rx="12" fill="#fbfcff" stroke="#d9e3ed" />
+<rect x="714" y="216" width="296" height="31" rx="12" fill="#eff3f8" />
+<rect x="714" y="235" width="296" height="12" rx="0" fill="#eff3f8" />
+<circle cx="731" cy="231" r="4.5" fill="#ee877d" />
+<circle cx="748" cy="231" r="4.5" fill="#efce82" />
+<circle cx="765" cy="231" r="4.5" fill="#92c9a3" />
+<text x="850" y="236" fill="#607287" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="500" text-anchor="middle">备忘录</text>
+<text x="738" y="286" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="20" font-weight="600" >今天的工作</text>
+<text x="738" y="329" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="450" >整理测试结果。</text>
+<rect x="738" y="350" width="222" height="51" rx="7" fill="#e4efff" />
+<text x="750" y="374" fill="#285c9e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="500" >周五前完成界面设计，</text>
+<text x="750" y="392" fill="#285c9e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="500" >整理测试结果。</text>
+<line x1="739" y1="425" x2="920" y2="425" stroke="#dce5ef" stroke-width="1" />
+<line x1="739" y1="443" x2="861" y2="443" stroke="#dce5ef" stroke-width="1" />
+<rect x="1036" y="170" width="300" height="448" rx="14" fill="#f8faff" stroke="#d7e1ee" filter="url(#shadow)"/>
+<g transform="translate(1055 190) scale(0.78)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#344b61" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#344b61" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#344b61" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#344b61" stroke-width="2" />
+</g>
+<text x="1090" y="205" fill="#23394e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" >EasyClipboard</text>
+<text x="1090" y="225" fill="#76889c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="12" font-weight="400" >剪贴板历史</text>
+<circle cx="1304" cy="205" r="14" fill="#e9eef4" />
+<rect x="1299" y="199" width="3" height="12" rx="1" fill="#526477" />
+<rect x="1306" y="199" width="3" height="12" rx="1" fill="#526477" />
+<rect x="1046" y="248" width="280" height="68" rx="10" fill="#dbe9fc" />
+<text x="1058" y="275" fill="#1d344d" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >周五前完成界面设计，</text>
+<text x="1058" y="299" fill="#1d344d" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >整理测试结果。</text>
+<line x1="1058" y1="325" x2="1314" y2="325" stroke="#dce4ee" stroke-width="1" />
+<text x="1058" y="350" fill="#334e67" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="500" >https://example.com/project</text>
+<line x1="1058" y1="365" x2="1314" y2="365" stroke="#dce4ee" stroke-width="1" />
+<rect x="1058" y="380" width="72" height="56" rx="7" fill="url(#photo)" />
+<g clip-path="url(#photoClip)">
+<circle cx="1114" cy="391" r="7" fill="#faf5cd" />
+<path d="M 1053 436 l 28 -34 l 23 26 l 13 -16 l 22 24 Z" fill="#729a92" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 1053 436 l 34 -16 l 31 16 Z" fill="#427c70" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="1144" y="399" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >图片</text>
+<text x="1144" y="420" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >图片</text>
+<text x="1314" y="420" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="10" font-weight="400" text-anchor="end">刚刚</text>
+<line x1="1058" y1="447" x2="1314" y2="447" stroke="#dce4ee" stroke-width="1" />
+<path d="M 1065 461 h 24 l 10 10 v 34 h -34 Z" fill="#ffffff" stroke="#a4b6c8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 1089 461 v 10 h 10" fill="none" stroke="#a4b6c8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1070" y="482" width="24" height="15" rx="3" fill="#f1e2de" />
+<text x="1082" y="493" fill="#925d4e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="8" font-weight="600" text-anchor="middle">PDF</text>
+<text x="1114" y="480" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="550" >界面草图.pdf</text>
+<text x="1114" y="502" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >2.4 MB · 副本</text>
+<line x1="1058" y1="523" x2="1314" y2="523" stroke="#dce4ee" stroke-width="1" />
+<text x="1058" y="550" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="10" font-weight="400" >点击粘贴，也可拖入文件</text>
+<text x="1195" y="586" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >4 / 20</text>
+<rect x="1240" y="566" width="79" height="29" rx="7" fill="#ffffff" stroke="#d4deeb" />
+<text x="1279" y="586" fill="#455c72" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="500" text-anchor="middle">⚙ 设置</text>
+<rect x="1354" y="354" width="14" height="88" rx="7" fill="#edf4fc" stroke="#d1deed" />
+<g transform="translate(1356 388) scale(0.31)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#3f5e7c" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#3f5e7c" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#3f5e7c" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#3f5e7c" stroke-width="2" />
+</g>
+<path d="M 1346 365 l -1 28 l 7 -7 l 7 12 l 5 -3 l -7 -12 l 10 -1 Z" fill="#ffffff" stroke="#344d61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="747" y="523" width="252" height="57" rx="11" fill="#ffffff" stroke="#ccdae8" />
+<path d="M 764 539 h 12 l 5 5 h 17 v 22 h -34 Z" fill="#d8eafa" stroke="#91b8d4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<text x="808" y="548" fill="#2b435b" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >项目文件</text>
+<text x="808" y="568" fill="#6f8397" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >拖入文件或文件夹</text>
+<path d="M 1005 551 C 1023 551 1021 573 1038 573" fill="none" stroke="#4e88b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 5"/>
+<path d="M 1030 567 l 8 6 l -8 6" fill="none" stroke="#4e88b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="714" y="638" fill="#314e62" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="12" font-weight="500" >靠近右侧标签展开，离开后自动收起。</text>
+</g>
+<rect x="70" y="720" width="424" height="112" rx="16" fill="#ffffff" stroke="#d9e3f2" />
+<rect x="89" y="742" width="46" height="46" rx="12" fill="#e3edfe" />
+<text x="112" y="772" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" text-anchor="middle">01</text>
+<text x="154" y="764" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="22" font-weight="600" >复制</text>
+<text x="154" y="797" fill="#667b92" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="15" font-weight="400" >文字、图片、文件</text>
+<rect x="508" y="720" width="424" height="112" rx="16" fill="#ffffff" stroke="#d9e3f2" />
+<rect x="527" y="742" width="46" height="46" rx="12" fill="#e3edfe" />
+<text x="550" y="772" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" text-anchor="middle">02</text>
+<text x="592" y="764" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="22" font-weight="600" >靠近</text>
+<text x="592" y="797" fill="#667b92" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="15" font-weight="400" >屏幕右侧的剪贴板标签</text>
+<rect x="946" y="720" width="424" height="112" rx="16" fill="#ffffff" stroke="#d9e3f2" />
+<rect x="965" y="742" width="46" height="46" rx="12" fill="#e3edfe" />
+<text x="988" y="772" fill="#246be8" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" text-anchor="middle">03</text>
+<text x="1030" y="764" fill="#19334e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="22" font-weight="600" >粘贴</text>
+<text x="1030" y="797" fill="#667b92" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="15" font-weight="400" >点击历史条目再次使用</text>
+</svg>

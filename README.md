@@ -1,28 +1,29 @@
-# EasyClipboard
+<div align="center">
+  <img src="docs/easyclipboard-icon.png" alt="EasyClipboard app icon" width="96">
+  <h1>EasyClipboard</h1>
+  <p><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
+  <p><strong>Your clipboard, within reach.</strong></p>
+  <p>A lightweight native macOS clipboard manager for text, images, and files.</p>
+  <p>macOS 15.5+ · SwiftUI + AppKit · Local storage · No third-party dependencies</p>
+</div>
 
-<img src="docs/easyclipboard-icon.png" alt="EasyClipboard 应用图标：蓝色剪贴板与叠放的白色卡片 / App icon: a blue clipboard with stacked white cards" width="112">
+![EasyClipboard feature illustration: a right-edge history panel, text and image previews, file import, and the copy–hover–paste workflow](docs/images/overview.en.png)
 
-轻量的原生 macOS 剪贴板历史工具，鼠标靠近屏幕右侧即可查看并粘贴最近复制的内容。
+*Feature illustration with English labels. The app currently uses Chinese interface text and a light panel appearance.*
 
-A lightweight native macOS clipboard manager. Move the pointer to the right edge of the screen to browse and paste recently copied content.
+## Features
 
-[中文](#中文) · [English](#english)
+- **Text, images, and files.** Keep recently copied content in one history; copying the same content again moves it to the top.
+- **Open from the screen edge.** Hover near the clipboard tab at the middle of the right edge to open the panel. It stays centered, fits shorter histories, and scrolls within a maximum height of 480 points. Moving away collapses it after a brief delay.
+- **Click to paste.** The floating panel preserves the target app's input focus. With Accessibility permission, selecting an item restores it to the clipboard and sends **⌘V** to that app.
+- **Readable text previews.** Text rows show the original content without extra icons or metadata. They grow to fit, preview up to 6 lines, and paste the complete original text.
+- **Drag in files and folders.** Add one or multiple files or folders directly to the panel, even while automatic recording is paused.
+- **Control your history.** Keep the latest 20 items by default, change the limit, pause or resume recording, delete individual items, or clear everything.
+- **Restore after relaunch.** History and attachments are saved locally with Core Data and managed attachment storage.
 
-## 中文
+## Build and run
 
-### 功能
-
-- 记录文字、图片和文件，重复内容自动移到顶部。
-- 文字条目只显示原文，按内容自适应高度，最多预览 6 行（条目最高 120 点）；点击仍粘贴完整内容。
-- 可将一个或多个文件、文件夹拖入历史面板，暂停自动记录时也可手动添加。
-- 屏幕右侧悬浮面板，靠近展开、离开自动收起，保持目标应用的输入焦点。
-- 默认保留最近 20 条，可调整数量、暂停记录、删除条目或清空历史。
-- 所有历史与附件保存在本机，重启后仍可查看。
-- 使用 SwiftUI、AppKit 和 Core Data，无第三方依赖。
-
-### 运行与使用
-
-需要 **macOS 15.5+、Xcode 16.4+**。克隆仓库并打开项目：
+Requires **macOS 15.5 or later** and **Xcode 16.4 or later**.
 
 ```sh
 git clone https://github.com/jackma5477001/EasyClipboard.git
@@ -30,71 +31,68 @@ cd EasyClipboard
 open EasyClipboard.xcodeproj
 ```
 
-1. 在 Xcode 中选择 **EasyClipboard / My Mac**，点击运行。
-2. 按 **⌘C** 复制文字、图片或文件。
-3. 在目标应用中放好光标，将鼠标移到屏幕右侧中间的剪贴板标签附近，点击历史条目粘贴。
-4. 自动粘贴需要在 **系统设置 → 隐私与安全性 → 辅助功能** 中允许 EasyClipboard。未授权时，点击条目恢复剪贴板后可手动按 **⌘V**。
+Select the **EasyClipboard** scheme and **My Mac** destination in Xcode, then run with **⌘R**. The app lives in the menu bar; use the clipboard icon to open history, pause recording, open settings, or quit.
 
-应用常驻菜单栏，可从菜单打开历史、暂停记录或进入设置。
+## Use it
 
-### 保存规则
+1. Copy text, an image, or files with **⌘C**.
+2. Place the cursor where you want to paste in the target app.
+3. Move the pointer near the clipboard tab at the middle of the right screen edge.
+4. Click a history item to restore and paste it.
 
-小于 **10 MiB** 的普通文件保存副本；较大的文件、文件夹和符号链接引用原位置。原位置失效时会提示。历史与附件位于 `~/Library/Application Support/EasyClipboard/`，清理历史不会删除原文件。
+For automatic pasting, enable EasyClipboard in **System Settings → Privacy & Security → Accessibility**. You can also request access from the menu bar. Without permission, the selected content is still restored to the clipboard; press **⌘V** manually. If the active app changes before pasting, EasyClipboard also falls back to manual paste.
 
-## English
+To add files manually, drag them from Finder into the panel. Importing alone does not change the system clipboard; selecting the imported item restores its files for pasting.
 
-### Features
+Hover over an item to reveal its delete button, or use its context menu. Open the gear button to change the history limit to a positive integer or clear history. Lowering the limit immediately removes the oldest excess entries. Content copied while recording is paused is skipped and is not added when recording resumes.
 
-- Saves text, images, and files; duplicate items move to the top.
-- Text rows show only the original content, size to fit, and preview up to 6 lines (120 points per row); clicking pastes the full text.
-- Drag one or more files or folders into the history panel, including while automatic recording is paused.
-- A floating panel at the right edge opens on hover and collapses when the pointer leaves, preserving the target application's input focus.
-- Keeps the latest 20 items by default, with an adjustable limit, pause/resume, item deletion, and history clearing.
-- Stores history and attachments locally and restores them after relaunch.
-- Built with SwiftUI, AppKit, and Core Data, with no third-party dependencies.
+## Storage rules
 
-### Build and use
+History and attachments are stored under:
 
-Requires **macOS 15.5+ and Xcode 16.4+**. Clone this repository and open `EasyClipboard.xcodeproj` using the commands above.
+```text
+~/Library/Application Support/EasyClipboard/
+├── History.sqlite
+└── Attachments/
+```
 
-1. Select **EasyClipboard / My Mac** in Xcode and run the app.
-2. Copy text, images, or files with **⌘C**.
-3. Place the cursor in the target app, move the pointer near the clipboard tab at the middle of the right screen edge, and click a history item to paste.
-4. Enable EasyClipboard under **System Settings → Privacy & Security → Accessibility** for automatic pasting. Without permission, clicking an item restores it to the clipboard so you can press **⌘V** manually.
+| Content | How it is stored |
+| --- | --- |
+| Text | Full original text, including whitespace |
+| Images | Local PNG or TIFF data |
+| Regular files smaller than **10 MiB** each | A local copy; if copying fails, the original location is retained |
+| Files **10 MiB or larger**, folders, and symbolic links | A reference to the original location |
 
-The app stays in the menu bar, where you can open history, pause recording, and access settings.
+Moving or deleting a referenced source can make it unavailable; the app reports this instead of pasting an incomplete file selection. Deleting history cleans up unused app-owned attachments and preserves copies still referenced by the system clipboard. Original files are never deleted by history cleanup.
 
-### Storage
+## Development and tests
 
-Regular files smaller than **10 MiB** are copied locally. Larger files, folders, and symbolic links reference their original locations; unavailable files are reported. History and attachments live in `~/Library/Application Support/EasyClipboard/`. Clearing history does not delete original files.
+Built with **Swift, SwiftUI, AppKit, and Core Data**, using system frameworks without third-party dependencies.
 
-## 图片说明 / Images
+| Source | Responsibility |
+| --- | --- |
+| `ClipboardController.swift` | Recording, deduplication, capacity, pause, and restore |
+| `ContentView.swift` | History rows, file drop, and settings |
+| `FloatingPanelCoordinator.swift` | Edge tabs, panel layout, and hover behavior |
+| `PasteCoordinator.swift` | Target app and paste permissions |
+| `AttachmentManager.swift` | File copies, references, and attachment cleanup |
+| `Persistence.swift` | Core Data storage and migration |
 
-<img src="docs/screenshots/history.png" alt="EasyClipboard 实际历史界面：文字和文件记录、暂停按钮、历史计数与设置 / App screenshot: text and file history, pause button, item count, and settings" width="280">
-
-**实际界面：** 隔离测试中的历史窗口，使用示例文字和文件记录展示蓝色选中态、暂停按钮、历史计数与设置入口。
-
-**App screenshot:** The history window captured during an isolated UI test, using sample text and file entries to show the blue selection, pause button, history count, and settings.
-
-![EasyClipboard 界面设计参考：右侧历史面板、收起标签与设置窗口 / Design reference: history panel, collapsed edge tab, and settings](docs/界面设计.png)
-
-**界面设计参考：** 右侧面板展示文字、图片和文件记录；左下为收起后的边缘标签，中下为历史条数设置。此图为设计参考，实际面板采用更紧凑的布局。
-
-**Design reference:** The right panel shows text, image, and file history. The lower left shows the collapsed edge tab; the settings window adjusts the history limit. The implemented panel uses a more compact layout.
-
-**应用图标：** 页首的蓝色剪贴板和叠放卡片代表复制内容与历史记录，图标原图及 AI 绘图提示词见 [图标生成说明](docs/图标生成说明.md)。
-
-**App icon:** The blue clipboard and stacked cards at the top represent copied content and its history. See [icon creation notes](docs/图标生成说明.md) for the original artwork and AI prompts.
-
-## 测试 / Tests
+Run unit tests:
 
 ```sh
 xcodebuild -project EasyClipboard.xcodeproj -scheme EasyClipboard \
   -configuration Debug -destination 'platform=macOS' \
-  -derivedDataPath /private/tmp/EasyClipboard-validation \
-  test CODE_SIGN_IDENTITY=-
+  -derivedDataPath /private/tmp/EasyClipboard-tests \
+  -only-testing:EasyClipboardTests test CODE_SIGN_IDENTITY=-
 ```
 
-测试使用独立存储和模拟剪贴板。详细验证记录见 [验收记录](docs/验收记录.md)。
+Remove `-only-testing:EasyClipboardTests` to include UI tests. UI tests require an interactive macOS session that can enable Xcode's UI automation. Tests use separate storage and a mock clipboard; paste events are verified through injected interfaces.
 
-Tests use isolated storage and a mock clipboard. See [validation notes](docs/验收记录.md) for details.
+After testing, remove the temporary build cache:
+
+```sh
+rm -rf /private/tmp/EasyClipboard-tests
+```
+
+The existing [validation log](docs/验收记录.md) records completed checks and remaining manual checks. The README illustrations are editable SVGs: [English](docs/images/overview.en.svg) and [Chinese](docs/images/overview.zh-CN.svg).

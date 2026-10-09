@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="880" viewBox="0 0 1440 880" role="img" aria-labelledby="title desc">
+<title id="title">EasyClipboard: your clipboard, within reach</title>
+<desc id="desc">English feature illustration: a light right-edge history panel for text, images and files, with copy, hover and paste steps. English labels illustrate functionality; the app currently uses Chinese labels.</desc>
+<defs>
+  <linearGradient id="wallpaper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#245863"/><stop offset="1" stop-color="#142f3c"/></linearGradient>
+  <linearGradient id="photo" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9dd8e7"/><stop offset="1" stop-color="#eff5ea"/></linearGradient>
+  <filter id="shadow" x="-35%" y="-25%" width="175%" height="165%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#091e35" flood-opacity="0.13"/></filter>
+  <clipPath id="desktop"><rect x="680" y="120" width="688" height="548" rx="22"/></clipPath>
+  <clipPath id="photoClip"><rect x="1058" y="380" width="72" height="56" rx="7"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1440" height="880" rx="0" fill="#10242b" />
+<line x1="670" y1="0" x2="670" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="718" y1="0" x2="718" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="766" y1="0" x2="766" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="814" y1="0" x2="814" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="862" y1="0" x2="862" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="910" y1="0" x2="910" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="958" y1="0" x2="958" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1006" y1="0" x2="1006" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1054" y1="0" x2="1054" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1102" y1="0" x2="1102" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1150" y1="0" x2="1150" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1198" y1="0" x2="1198" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1246" y1="0" x2="1246" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1294" y1="0" x2="1294" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1342" y1="0" x2="1342" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1390" y1="0" x2="1390" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="1438" y1="0" x2="1438" y2="688" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="32" x2="1440" y2="32" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="80" x2="1440" y2="80" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="128" x2="1440" y2="128" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="176" x2="1440" y2="176" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="224" x2="1440" y2="224" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="272" x2="1440" y2="272" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="320" x2="1440" y2="320" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="368" x2="1440" y2="368" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="416" x2="1440" y2="416" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="464" x2="1440" y2="464" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="512" x2="1440" y2="512" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="560" x2="1440" y2="560" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="608" x2="1440" y2="608" stroke="#1a343c" stroke-width="1" />
+<line x1="640" y1="656" x2="1440" y2="656" stroke="#1a343c" stroke-width="1" />
+<path d="M 52 120 H 190" fill="none" stroke="#86e3c0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<g transform="translate(70 46) scale(0.9)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#86e3c0" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#86e3c0" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#86e3c0" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#86e3c0" stroke-width="2" />
+</g>
+<text x="112" y="72" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="25" font-weight="650" >EasyClipboard</text>
+<text x="70" y="150" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="600" letter-spacing="1">NATIVE macOS CLIPBOARD HISTORY</text>
+<text x="70" y="222" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="58" font-weight="650" >Your clipboard,</text>
+<text x="70" y="296" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="58" font-weight="650" >within reach.</text>
+<text x="72" y="352" fill="#adc6cb" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="20" font-weight="400" >Text, images, and files. Saved on your Mac.</text>
+<text x="72" y="385" fill="#adc6cb" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="20" font-weight="400" >Hover at the right edge. Click to paste again.</text>
+<rect x="70" y="423" width="160" height="38" rx="19" fill="#1b3c43" />
+<text x="150.0" y="448" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" text-anchor="middle">macOS 15.5+</text>
+<rect x="240" y="423" width="156" height="38" rx="19" fill="#1b3c43" />
+<text x="318.0" y="448" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" text-anchor="middle">Local storage</text>
+<rect x="406" y="423" width="188" height="38" rx="19" fill="#1b3c43" />
+<text x="500.0" y="448" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" text-anchor="middle">No third-party deps</text>
+<circle cx="81" cy="510" r="11" fill="#1b3c43" />
+<path d="M 76 510 l 4 4 l 7 -8" fill="none" stroke="#86e3c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="104" y="516" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="18" font-weight="450" >Duplicates move to the top</text>
+<circle cx="81" cy="553" r="11" fill="#1b3c43" />
+<path d="M 76 553 l 4 4 l 7 -8" fill="none" stroke="#86e3c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="104" y="559" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="18" font-weight="450" >Import files while recording is paused</text>
+<circle cx="81" cy="596" r="11" fill="#1b3c43" />
+<path d="M 76 596 l 4 4 l 7 -8" fill="none" stroke="#86e3c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="104" y="602" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="18" font-weight="450" >20 recent items by default; adjustable</text>
+<text x="72" y="656" fill="#adc6cb" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="12" font-weight="500" >FEATURE ILLUSTRATION · ENGLISH LABELS</text>
+<rect x="680" y="120" width="688" height="548" rx="22" fill="url(#wallpaper)" stroke="#30505a" filter="url(#shadow)"/>
+<g clip-path="url(#desktop)">
+<path d="M 680 590 C 790 368 890 518 1030 384 S 1230 294 1370 428 V 670 H 680 Z" fill="#40717b" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" opacity="0.20"/>
+<rect x="680" y="120" width="688" height="30" rx="0" fill="#d4e7e7" opacity="0.55"/>
+<text x="702" y="140" fill="#314c61" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="550" >Workspace</text>
+<g transform="translate(1326 127) scale(0.42)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#314c61" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#314c61" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#314c61" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#314c61" stroke-width="2" />
+</g>
+<rect x="714" y="216" width="296" height="259" rx="12" fill="#fbfcff" stroke="#d9e3ed" />
+<rect x="714" y="216" width="296" height="31" rx="12" fill="#eff3f8" />
+<rect x="714" y="235" width="296" height="12" rx="0" fill="#eff3f8" />
+<circle cx="731" cy="231" r="4.5" fill="#ee877d" />
+<circle cx="748" cy="231" r="4.5" fill="#efce82" />
+<circle cx="765" cy="231" r="4.5" fill="#92c9a3" />
+<text x="850" y="236" fill="#607287" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="500" text-anchor="middle">Notes</text>
+<text x="738" y="286" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="20" font-weight="600" >Today’s work</text>
+<text x="738" y="329" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="450" >Review the test results.</text>
+<rect x="738" y="350" width="222" height="51" rx="7" fill="#e4efff" />
+<text x="750" y="374" fill="#285c9e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="500" >Finish the interface design</text>
+<text x="750" y="392" fill="#285c9e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="500" >and review the test results.</text>
+<line x1="739" y1="425" x2="920" y2="425" stroke="#dce5ef" stroke-width="1" />
+<line x1="739" y1="443" x2="861" y2="443" stroke="#dce5ef" stroke-width="1" />
+<rect x="1036" y="170" width="300" height="448" rx="14" fill="#f8faff" stroke="#d7e1ee" filter="url(#shadow)"/>
+<g transform="translate(1055 190) scale(0.78)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#344b61" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#344b61" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#344b61" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#344b61" stroke-width="2" />
+</g>
+<text x="1090" y="205" fill="#23394e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" >EasyClipboard</text>
+<text x="1090" y="225" fill="#76889c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="12" font-weight="400" >Clipboard history</text>
+<circle cx="1304" cy="205" r="14" fill="#e9eef4" />
+<rect x="1299" y="199" width="3" height="12" rx="1" fill="#526477" />
+<rect x="1306" y="199" width="3" height="12" rx="1" fill="#526477" />
+<rect x="1046" y="248" width="280" height="68" rx="10" fill="#dbe9fc" />
+<text x="1058" y="275" fill="#1d344d" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >Finish the interface design</text>
+<text x="1058" y="299" fill="#1d344d" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >and review the test results.</text>
+<line x1="1058" y1="325" x2="1314" y2="325" stroke="#dce4ee" stroke-width="1" />
+<text x="1058" y="350" fill="#334e67" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="500" >https://example.com/project</text>
+<line x1="1058" y1="365" x2="1314" y2="365" stroke="#dce4ee" stroke-width="1" />
+<rect x="1058" y="380" width="72" height="56" rx="7" fill="url(#photo)" />
+<g clip-path="url(#photoClip)">
+<circle cx="1114" cy="391" r="7" fill="#faf5cd" />
+<path d="M 1053 436 l 28 -34 l 23 26 l 13 -16 l 22 24 Z" fill="#729a92" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 1053 436 l 34 -16 l 31 16 Z" fill="#427c70" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="1144" y="399" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >Image</text>
+<text x="1144" y="420" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >Image</text>
+<text x="1314" y="420" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="10" font-weight="400" text-anchor="end">Now</text>
+<line x1="1058" y1="447" x2="1314" y2="447" stroke="#dce4ee" stroke-width="1" />
+<path d="M 1065 461 h 24 l 10 10 v 34 h -34 Z" fill="#ffffff" stroke="#a4b6c8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M 1089 461 v 10 h 10" fill="none" stroke="#a4b6c8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1070" y="482" width="24" height="15" rx="3" fill="#f1e2de" />
+<text x="1082" y="493" fill="#925d4e" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="8" font-weight="600" text-anchor="middle">PDF</text>
+<text x="1114" y="480" fill="#253b52" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="13" font-weight="550" >Design sketch.pdf</text>
+<text x="1114" y="502" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >2.4 MB · Local copy</text>
+<line x1="1058" y1="523" x2="1314" y2="523" stroke="#dce4ee" stroke-width="1" />
+<text x="1058" y="550" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="10" font-weight="400" >Click to paste or drop files</text>
+<text x="1195" y="586" fill="#7c8a9c" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >4 / 20</text>
+<rect x="1240" y="566" width="79" height="29" rx="7" fill="#ffffff" stroke="#d4deeb" />
+<text x="1279" y="586" fill="#455c72" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="500" text-anchor="middle">⚙ Settings</text>
+<rect x="1354" y="354" width="14" height="88" rx="7" fill="#edf4fc" stroke="#d1deed" />
+<g transform="translate(1356 388) scale(0.31)">
+<rect x="4" y="5" width="23" height="29" rx="4" fill="none" stroke="#3f5e7c" stroke-width="2"/>
+<rect x="10" y="1" width="11" height="7" rx="2" fill="#3f5e7c" />
+<line x1="10" y1="15" x2="21" y2="15" stroke="#3f5e7c" stroke-width="2" />
+<line x1="10" y1="22" x2="18" y2="22" stroke="#3f5e7c" stroke-width="2" />
+</g>
+<path d="M 1346 365 l -1 28 l 7 -7 l 7 12 l 5 -3 l -7 -12 l 10 -1 Z" fill="#ffffff" stroke="#344d61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="747" y="523" width="252" height="57" rx="11" fill="#ffffff" stroke="#ccdae8" />
+<path d="M 764 539 h 12 l 5 5 h 17 v 22 h -34 Z" fill="#d8eafa" stroke="#91b8d4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<text x="808" y="548" fill="#2b435b" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="14" font-weight="550" >Project files</text>
+<text x="808" y="568" fill="#6f8397" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="11" font-weight="400" >Drop files or folders</text>
+<path d="M 1005 551 C 1023 551 1021 573 1038 573" fill="none" stroke="#4e88b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 5"/>
+<path d="M 1030 567 l 8 6 l -8 6" fill="none" stroke="#4e88b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="714" y="638" fill="#d4e9ed" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="12" font-weight="500" >Hover near the edge tab to open. Move away to collapse.</text>
+</g>
+<rect x="70" y="720" width="424" height="112" rx="16" fill="#19333b" stroke="#30505a" />
+<rect x="89" y="742" width="46" height="46" rx="12" fill="#1b3c43" />
+<text x="112" y="772" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" text-anchor="middle">01</text>
+<text x="154" y="764" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="22" font-weight="600" >Copy</text>
+<text x="154" y="797" fill="#adc6cb" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="15" font-weight="400" >Text, images, or files</text>
+<rect x="508" y="720" width="424" height="112" rx="16" fill="#19333b" stroke="#30505a" />
+<rect x="527" y="742" width="46" height="46" rx="12" fill="#1b3c43" />
+<text x="550" y="772" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" text-anchor="middle">02</text>
+<text x="592" y="764" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="22" font-weight="600" >Hover</text>
+<text x="592" y="797" fill="#adc6cb" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="15" font-weight="400" >Near the right-edge tab</text>
+<rect x="946" y="720" width="424" height="112" rx="16" fill="#19333b" stroke="#30505a" />
+<rect x="965" y="742" width="46" height="46" rx="12" fill="#1b3c43" />
+<text x="988" y="772" fill="#86e3c0" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="17" font-weight="650" text-anchor="middle">03</text>
+<text x="1030" y="764" fill="#f1f8f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="22" font-weight="600" >Paste</text>
+<text x="1030" y="797" fill="#adc6cb" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', sans-serif" font-size="15" font-weight="400" >Click a history item</text>
+</svg>
