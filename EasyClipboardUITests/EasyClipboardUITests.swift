@@ -48,6 +48,36 @@ final class EasyClipboardUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["剪贴板还是空的"].waitForExistence(timeout: 3))
     }
 
+    @MainActor func testHoverDeleteKeepsRowHeightAndFollowingEntryPosition() {
+        let title = "周五前完成界面设计，整理测试结果。"
+        let row = app.buttons[title]
+        let following = app.buttons["界面草图.pdf"]
+        XCTAssertTrue(row.waitForExistence(timeout: 5))
+        app.staticTexts["appTitle"].hover()
+        let original = row.frame
+        let followingOrigin = following.frame.minY
+
+        row.hover()
+        let delete = app.buttons["删除\(title)"]
+        XCTAssertTrue(delete.waitForExistence(timeout: 3))
+        XCTAssertEqual(row.frame.height, original.height, accuracy: 0.5)
+        XCTAssertEqual(following.frame.minY, followingOrigin, accuracy: 0.5)
+        let attachment = XCTAttachment(screenshot: app.windows["EasyClipboard"].screenshot())
+        attachment.name = "EasyClipboard-悬停删除"
+        attachment.lifetime = .keepAlways
+        add(attachment)
+
+        app.staticTexts["appTitle"].hover()
+        XCTAssertFalse(delete.exists)
+        XCTAssertEqual(row.frame.height, original.height, accuracy: 0.5)
+        row.hover()
+        XCTAssertTrue(delete.waitForExistence(timeout: 3))
+        delete.click()
+        XCTAssertFalse(row.exists)
+        XCTAssertTrue(following.exists)
+        XCTAssertEqual(app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "history-")).count, 1)
+    }
+
     @MainActor func testDeleteAndSettingsPersistAcrossRelaunch() {
         let row = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "history-")).firstMatch
         XCTAssertTrue(row.waitForExistence(timeout: 5))

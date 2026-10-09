@@ -74,16 +74,19 @@ struct ContentView: View {
                     LazyVStack(spacing: 0) {
                         ForEach(controller.entries) { entry in
                             let highlighted = hoveredID == entry.id || (hoveredID == nil && controller.entries.first?.id == entry.id)
-                            HStack(spacing: 0) {
-                                Button { onSelect(entry) } label: {
-                                    ClipboardRow(entry: entry, attachments: controller.attachments)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .contentShape(Rectangle())
-                                }
-                                .buttonStyle(.plain)
-                                .accessibilityIdentifier("history-\(entry.id.uuidString)")
-                                .accessibilityLabel(entry.title)
-                                .help("粘贴：\(entry.title)")
+                            Button { onSelect(entry) } label: {
+                                ClipboardRow(entry: entry, attachments: controller.attachments)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityIdentifier("history-\(entry.id.uuidString)")
+                            .accessibilityLabel(entry.title)
+                            .help("粘贴：\(entry.title)")
+                            .mask {
+                                Rectangle().padding(.trailing, hoveredID == entry.id ? 30 : 0)
+                            }
+                            .overlay(alignment: .trailing) {
                                 if hoveredID == entry.id {
                                     Button { controller.delete(entry) } label: {
                                         Image(systemName: "trash").font(.system(size: 12)).foregroundStyle(.secondary)
