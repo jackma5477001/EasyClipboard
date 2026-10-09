@@ -22,12 +22,14 @@ final class EasyClipboardUITests: XCTestCase {
     @MainActor func testHistorySettingsPauseAndClear() {
         XCTAssertTrue(app.staticTexts["剪贴板历史"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["周五前完成界面设计，整理测试结果。"].exists)
+        XCTAssertFalse(app.staticTexts["文字"].exists)
+        XCTAssertLessThan(app.buttons["周五前完成界面设计，整理测试结果。"].frame.height, 72)
         let attachment = XCTAttachment(screenshot: app.windows["EasyClipboard"].screenshot())
         attachment.name = "EasyClipboard-历史"
         attachment.lifetime = .keepAlways
         add(attachment)
         app.buttons["pauseRecording"].click()
-        XCTAssertTrue(app.staticTexts["记录已暂停"].exists)
+        XCTAssertTrue(app.staticTexts["记录已暂停，可拖入文件"].exists)
         app.buttons["pauseRecording"].click()
         app.buttons["openSettings"].click()
         let field = app.textFields["historyLimit"]
@@ -61,5 +63,25 @@ final class EasyClipboardUITests: XCTestCase {
         app.launch()
         app.buttons["openSettings"].click()
         XCTAssertEqual(app.textFields["historyLimit"].value as? String, "8")
+    }
+
+    @MainActor func testFileDragImportsWhilePausedAndPersists() throws {
+        app.terminate()
+        let file = root.appendingPathComponent("拖入测试.txt")
+        try Data("拖入文件的内容".utf8).write(to: file)
+        app.launchArguments += ["--drag-test-file", file.path]
+        app.launch()
+        let source = app.staticTexts["dragTestFile"]
+        XCTAssertTrue(source.waitForExistence(timeout: 5))
+        app.buttons["pauseRecording"].click()
+        let destination = app.scrollViews["historyList"]
+        source.press(forDuration: 0.5, thenDragTo: destination)
+        XCTAssertTrue(app.buttons["拖入测试.txt"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["historyCount"].label, "3 / 20")
+        app.terminate()
+        try FileManager.default.removeItem(at: file)
+        app.launchArguments.removeLast(2)
+        app.launch()
+        XCTAssertTrue(app.buttons["拖入测试.txt"].waitForExistence(timeout: 5))
     }
 }

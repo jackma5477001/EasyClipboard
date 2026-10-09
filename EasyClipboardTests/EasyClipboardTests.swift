@@ -1,5 +1,6 @@
 import AppKit
 import CoreData
+import SwiftUI
 import Testing
 @testable import EasyClipboard
 
@@ -65,6 +66,94 @@ struct EasyClipboardTests {
         let env = try TestEnvironment(); defer { env.cleanup() }
         await env.copy(nil)
         #expect(env.controller.entries.isEmpty)
+    }
+
+    @Test func textRowsFitContentsAndLimitLongPreviewsWithoutChangingPaste() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        func height(for text: String) -> CGFloat {
+            let entry = ClipboardEntry(id: UUID(), timestamp: Date(), fingerprint: "layout", kind: .text, text: text, files: [])
+            let host = NSHostingView(rootView: ClipboardRow(entry: entry, attachments: env.attachments).frame(width: 240))
+            return host.fittingSize.height
+        }
+        let single = height(for: "EasyClipboard")
+        let multiple = height(for: "第一行\n第二行\n第三行")
+        let original = "  开头保留空格\n" + String(repeating: "完整原文仍然可以粘贴。\n", count: 30) + "  "
+        let long = height(for: original)
+        #expect(single < 72)
+        #expect(single < multiple)
+        #expect(multiple < long)
+        #expect(long <= 120)
+        await env.copy(.text(original))
+        env.controller.restore(try #require(env.controller.entries.first)) { #expect($0) }
+        await env.controller.waitUntilIdle()
+        #expect(env.board.payload == .text(original))
+    }
+
+    @Test func droppedFilesPersistWhilePausedAndRestoreSavedCopies() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        await env.copy(.text("原剪贴板内容"))
+        env.controller.togglePause()
+        let first = try env.file("拖入的说明.txt", size: 16)
+        let second = try env.file("拖入的图片.png", size: 24)
+        let folder = env.root.appendingPathComponent("拖入的文件夹")
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        let before = env.board.changeCount
+        #expect(env.controller.addFiles([first, second, folder]))
+        await env.controller.waitUntilIdle()
+        let entry = try #require(env.controller.entries.first)
+        #expect(entry.kind == .files)
+        #expect(entry.files.map(\.originalURL) == [first, second, folder])
+        #expect(entry.files[0].relativeCopyPath != nil)
+        #expect(entry.files[1].relativeCopyPath != nil)
+        #expect(entry.files[2].isDirectory)
+        #expect(entry.files[2].relativeCopyPath == nil)
+        #expect(env.board.changeCount == before)
+        #expect(env.board.payload == .text("原剪贴板内容"))
+        #expect(try env.makeController().entries.first == entry)
+        try FileManager.default.removeItem(at: first)
+        env.controller.restore(entry) { #expect($0) }
+        await env.controller.waitUntilIdle()
+        guard case .files(let urls) = env.board.payload else { Issue.record("应恢复拖入的文件"); return }
+        #expect(urls.count == 3)
+        #expect(FileManager.default.isReadableFile(atPath: urls[0].path))
+    }
+
+    @Test func droppedFilesShareDeduplicationAndHistoryLimitWithCopiedFiles() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        let source = try env.file("同一个文件.txt", size: 16)
+        await env.copy(.files([source]))
+        await env.copy(.text("第二条"))
+        env.controller.addFiles([source])
+        await env.controller.waitUntilIdle()
+        #expect(env.controller.entries.count == 2)
+        #expect(env.controller.entries.first?.files.first?.originalURL == source)
+        env.controller.setLimit(1)
+        let next = try env.file("新文件.txt", size: 16)
+        env.controller.addFiles([next])
+        await env.controller.waitUntilIdle()
+        #expect(env.controller.entries.count == 1)
+        #expect(env.controller.entries.first?.files.first?.originalURL == next)
+        #expect(FileManager.default.fileExists(atPath: source.path))
+    }
+
+    @Test func invalidDropsAndFailedImportsKeepExistingHistory() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        await env.copy(.text("保留历史"))
+        let before = env.controller.entries
+        #expect(!env.controller.addFiles([]))
+        #expect(!env.controller.addFiles([URL(string: "https://example.com/file.txt")!]))
+        let source = try env.file("可用.txt", size: 16)
+        env.controller.addFiles([source, env.root.appendingPathComponent("不存在.txt")])
+        await env.controller.waitUntilIdle()
+        #expect(env.controller.entries == before)
+        #expect(env.controller.message?.contains("不存在.txt") == true)
+        env.repository.failSave = true
+        env.controller.addFiles([source])
+        await env.controller.waitUntilIdle()
+        #expect(env.controller.entries == before)
+        #expect(env.controller.message?.contains("磁盘写入失败") == true)
+        #expect((try? FileManager.default.contentsOfDirectory(atPath: env.attachments.root.path).isEmpty) == true)
+        #expect(FileManager.default.fileExists(atPath: source.path))
     }
 
     @Test func imageDataRoundTripsAndMissingImageIsReported() async throws {

@@ -15,6 +15,7 @@ final class ClipboardAppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem?
     private var settingsWindow: NSWindow?
     private var testWindow: NSWindow?
+    private var dragTestWindow: NSWindow?
     private var testRoot: URL?
     private var pauseItem: NSMenuItem?
     private var observation: Any?
@@ -156,6 +157,17 @@ final class ClipboardAppDelegate: NSObject, NSApplicationDelegate {
         testWindow = window
         NSApp.activate(ignoringOtherApps: true)
         window.makeKeyAndOrderFront(nil)
+        if let path = argument("--drag-test-file") {
+            let url = URL(fileURLWithPath: path)
+            let source = NSWindow(contentRect: NSRect(x: window.frame.minX - 250, y: window.frame.midY, width: 240, height: 80),
+                                  styleMask: [.titled, .closable], backing: .buffered, defer: false)
+            source.title = "拖拽测试文件"
+            source.isReleasedWhenClosed = false
+            source.contentView = NSHostingView(rootView: Text(url.lastPathComponent).padding(20)
+                .frame(width: 240, height: 80).draggable(url).accessibilityIdentifier("dragTestFile"))
+            source.orderFront(nil)
+            dragTestWindow = source
+        }
     }
 
     private func argument(_ key: String) -> String? {

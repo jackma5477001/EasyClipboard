@@ -13,6 +13,8 @@ A lightweight native macOS clipboard manager. Move the pointer to the right edge
 ### 功能
 
 - 记录文字、图片和文件，重复内容自动移到顶部。
+- 文字条目只显示原文，按内容自适应高度，最多预览 6 行（条目最高 120 点）；点击仍粘贴完整内容。
+- 可将一个或多个文件、文件夹拖入历史面板，暂停自动记录时也可手动添加。
 - 屏幕右侧悬浮面板，靠近展开、离开自动收起，保持目标应用的输入焦点。
 - 默认保留最近 20 条，可调整数量、暂停记录、删除条目或清空历史。
 - 所有历史与附件保存在本机，重启后仍可查看。
@@ -44,6 +46,8 @@ open EasyClipboard.xcodeproj
 ### Features
 
 - Saves text, images, and files; duplicate items move to the top.
+- Text rows show only the original content, size to fit, and preview up to 6 lines (120 points per row); clicking pastes the full text.
+- Drag one or more files or folders into the history panel, including while automatic recording is paused.
 - A floating panel at the right edge opens on hover and collapses when the pointer leaves, preserving the target application's input focus.
 - Keeps the latest 20 items by default, with an adjustable limit, pause/resume, item deletion, and history clearing.
 - Stores history and attachments locally and restores them after relaunch.

@@ -71,6 +71,23 @@ final class ClipboardController: ObservableObject {
         }
     }
 
+    /// Explicit imports remain available while automatic clipboard recording is paused.
+    @discardableResult
+    func addFiles(_ urls: [URL]) -> Bool {
+        guard !urls.isEmpty, urls.allSatisfy(\.isFileURL) else { return false }
+        enqueue { controller in
+            let accessed = urls.filter { $0.startAccessingSecurityScopedResource() }
+            defer { accessed.forEach { $0.stopAccessingSecurityScopedResource() } }
+            do {
+                let unavailable = urls.filter { !FileManager.default.isReadableFile(atPath: $0.path) }
+                guard unavailable.isEmpty else { throw ClipboardFailure.unavailableFiles(unavailable.map(\.lastPathComponent)) }
+                try await controller.record(.files(urls))
+            } catch { controller.report(error) }
+            await controller.clean()
+        }
+        return true
+    }
+
     func restore(_ entry: ClipboardEntry, completion: @escaping (Bool) -> Void) {
         enqueue { controller in
             do {
@@ -107,10 +124,7 @@ final class ClipboardController: ObservableObject {
         // Avoid mixing representations from two clipboard owners.
         guard pasteboard.changeCount == change else { return }
         do {
-            let newEntry = try await attachments.prepare(payload)
-            var updated = entries.filter { $0.fingerprint != newEntry.fingerprint }
-            updated.insert(newEntry, at: 0)
-            try commit(Array(updated.prefix(limit)))
+            try await record(payload)
             lastObservedChange = change
             await clean()
         } catch {
@@ -118,6 +132,13 @@ final class ClipboardController: ObservableObject {
             report(error)
             await clean()
         }
+    }
+
+    private func record(_ payload: ClipboardPayload) async throws {
+        let newEntry = try await attachments.prepare(payload)
+        var updated = entries.filter { $0.fingerprint != newEntry.fingerprint }
+        updated.insert(newEntry, at: 0)
+        try commit(Array(updated.prefix(limit)))
     }
 
     private func commit(_ updated: [ClipboardEntry]) throws {
