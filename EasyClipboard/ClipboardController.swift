@@ -33,7 +33,9 @@ final class ClipboardController: ObservableObject {
         enqueue { controller in await controller.trimAndClean(); await controller.poll() }
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             Task { @MainActor in
-                guard let self, !self.isBusy else { return }
+                // Unchanged clipboard checks must not flash the footer's busy indicator.
+                guard let self, !self.isBusy,
+                      self.pasteboard.changeCount != self.lastObservedChange else { return }
                 self.enqueue { await $0.poll() }
             }
         }

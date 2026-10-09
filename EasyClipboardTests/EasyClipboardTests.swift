@@ -1,4 +1,5 @@
 import AppKit
+import Combine
 import CoreData
 import SwiftUI
 import Testing
@@ -25,6 +26,35 @@ struct EasyClipboardTests {
         await env.copy(.text("第一条"))
         #expect(env.controller.entries.map(\.text) == ["第一条", "第二条"])
         #expect(try env.repository.load().count == 2)
+    }
+
+    @Test func automaticPollingStaysIdleUntilClipboardChanges() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        await env.copy(.text("已有内容"))
+        env.controller.start()
+        await env.controller.waitUntilIdle()
+
+        var busyStates: [Bool] = []
+        let observation = env.controller.$isBusy.dropFirst().sink { busyStates.append($0) }
+        defer { observation.cancel() }
+        // Observe multiple real timer ticks, including transient spinner updates.
+        try await Task.sleep(for: .milliseconds(1100))
+        await env.controller.waitUntilIdle()
+        #expect(busyStates.isEmpty)
+        #expect(env.controller.entries.map(\.text) == ["已有内容"])
+
+        env.board.payload = .text("新复制内容")
+        env.board.changeCount += 1
+        try await Task.sleep(for: .milliseconds(650))
+        await env.controller.waitUntilIdle()
+        #expect(busyStates.contains(true))
+        #expect(!env.controller.isBusy)
+        #expect(env.controller.entries.map(\.text) == ["新复制内容", "已有内容"])
+
+        busyStates.removeAll()
+        try await Task.sleep(for: .milliseconds(1100))
+        await env.controller.waitUntilIdle()
+        #expect(busyStates.isEmpty)
     }
 
     @Test func capacityTrimsOldestAndReducingLimitActsImmediately() async throws {
