@@ -363,6 +363,53 @@ struct EasyClipboardTests {
         #expect(shortScreen.contains(ClipboardPanelLayout.frame(in: shortScreen, itemCount: 20, hasMessage: true)))
     }
 
+    @Test func hostedPanelStaysCenteredAndHeightLimitedAsContentChanges() async throws {
+        let env = try TestEnvironment(); defer { env.cleanup() }
+        let screen = try #require(NSScreen.screens.first)
+        let available = screen.visibleFrame
+        let point = NSPoint(x: available.maxX - 7, y: available.midY)
+        let coordinator = FloatingPanelCoordinator(controller: env.controller, pasteCoordinator: PasteCoordinator(),
+            onSelect: { _ in }, openSettings: {}, pointerLocation: { point })
+        defer { coordinator.stop() }
+
+        for index in 0..<13 {
+            await env.copy(.text("条目\(index)\n" + String(repeating: "较长的历史内容应在面板内滚动。\n", count: 12)))
+        }
+        env.controller.message = "内容已复制。请按 Command+V 粘贴；开启辅助功能权限后可自动粘贴。"
+        coordinator.showNearPointer()
+        let panel = try #require(NSApp.windows.first {
+            $0 is ClipboardPanel && $0.contentView is NSHostingView<ContentView>
+        })
+
+        func expectFrame(itemCount: Int, hasMessage: Bool) {
+            let expected = ClipboardPanelLayout.frame(in: available, itemCount: itemCount, hasMessage: hasMessage)
+            #expect(abs(panel.frame.height - expected.height) < 0.5)
+            #expect(panel.frame.height <= 480)
+            // AppKit rounds the window origin to screen pixels.
+            #expect(abs(panel.frame.midY - available.midY) <= 0.5)
+            #expect(panel.maxSize.height <= 480)
+            #expect(abs(panel.frame.maxX - (available.maxX - 14)) < 0.5)
+            #expect(available.contains(panel.frame))
+            #expect(panel.contentView?.frame.size == panel.frame.size)
+        }
+        try await Task.sleep(for: .milliseconds(150))
+        panel.contentView?.layoutSubtreeIfNeeded()
+        expectFrame(itemCount: 13, hasMessage: true)
+
+        env.controller.message = nil
+        env.controller.setLimit(1)
+        await env.controller.waitUntilIdle()
+        try await Task.sleep(for: .milliseconds(150))
+        panel.contentView?.layoutSubtreeIfNeeded()
+        expectFrame(itemCount: 1, hasMessage: false)
+
+        env.controller.clear()
+        await env.controller.waitUntilIdle()
+        try await Task.sleep(for: .milliseconds(150))
+        panel.contentView?.layoutSubtreeIfNeeded()
+        expectFrame(itemCount: 0, hasMessage: false)
+    }
+
     @Test func approachingTabOpensAndLeavingClosesWithReentryGrace() async throws {
         let env = try TestEnvironment(); defer { env.cleanup() }
         let screen = try #require(NSScreen.screens.first)

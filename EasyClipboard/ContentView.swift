@@ -124,6 +124,7 @@ struct ContentView: View {
             .accessibilityElement(children: .contain)
             .padding(.horizontal, 14).padding(.vertical, 11)
         }
+        .frame(maxHeight: ClipboardPanelLayout.maximumHeight)
         .background(VisualEffect())
         .overlay {
             if isDropTargeted {

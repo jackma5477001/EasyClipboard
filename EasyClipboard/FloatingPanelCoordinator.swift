@@ -9,11 +9,13 @@ final class ClipboardPanel: NSPanel {
 
 /// Short histories stay compact; longer histories scroll within the screen's available bounds.
 struct ClipboardPanelLayout {
+    static let maximumHeight: CGFloat = 480
+
     static func frame(in available: NSRect, itemCount: Int, hasMessage: Bool = false) -> NSRect {
         let count = min(max(itemCount, 0), 5)
         let contentHeight = count == 0 ? 240 : max(220, 128 + CGFloat(count) * 88 + CGFloat(max(count - 1, 0)) * 8)
         let width = min(280, max(0, available.width - 14))
-        let height = min(480, max(0, available.height - 24), contentHeight + (hasMessage ? 70 : 0))
+        let height = min(maximumHeight, max(0, available.height - 24), contentHeight + (hasMessage ? 70 : 0))
         return NSRect(x: available.maxX - width - 14, y: available.midY - height / 2, width: width, height: height)
     }
 }
@@ -125,8 +127,13 @@ final class FloatingPanelCoordinator {
         panel?.close()
         activeScreen = id
         pasteCoordinator.rememberTarget()
-        let window = makePanel(frame: ClipboardPanelLayout.frame(in: screen.visibleFrame, itemCount: controller.entries.count, hasMessage: controller.message != nil))
-        window.contentView = NSHostingView(rootView: ContentView(controller: controller, onSelect: onSelect, openSettings: openSettings))
+        let frame = ClipboardPanelLayout.frame(in: screen.visibleFrame, itemCount: controller.entries.count, hasMessage: controller.message != nil)
+        let window = makePanel(frame: frame)
+        let hostingView = NSHostingView(rootView: ContentView(controller: controller, onSelect: onSelect, openSettings: openSettings))
+        // The coordinator owns the window size; content must scroll rather than resize it.
+        hostingView.sizingOptions = [.maxSize]
+        window.contentView = hostingView
+        window.setFrame(frame, display: false)
         window.orderFrontRegardless()
         panel = window
     }
